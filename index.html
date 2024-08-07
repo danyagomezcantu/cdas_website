@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro de Datos + Algoritmos + Sociedad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="nav-wrapper" style="background-color: #006853;">
+  <nav class="nav-wrapper" style="background-color: var(--green);">
     <div class="container">
       <a href="index.html" class="brand-logo">
         <img src="images/itam_logo.png" alt="ITAM Logo">
         <img src="images/cdas_logo.jpg" alt="CDAS Logo">
-        <span class="center-name">Centro de Datos + Algoritmos + Sociedad</span>
       </a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -26,7 +26,7 @@
         <li><a href="events.html" class="lang" data-en="Events" data-es="Eventos">Events</a></li>
         <li><a href="news.html" class="lang" data-en="News & Social Media" data-es="Noticias y Redes Sociales">News & Social Media</a></li>
         <li>
-          <a href="#" id="toggle-lang" class="btn" style="background-color: var(--gold); color: var(--green);">ES</a>
+          <a href="#" id="toggle-lang" class="btn" style="background-color: var(--silver); color: var(--green);">ES</a>
         </li>
       </ul>
     </div>
@@ -41,7 +41,7 @@
     <li><a href="events.html" class="lang" data-en="Events" data-es="Eventos">Events</a></li>
     <li><a href="news.html" class="lang" data-en="News & Social Media" data-es="Noticias y Redes Sociales">News & Social Media</a></li>
     <li>
-      <a href="#" id="toggle-lang-mobile" class="btn" style="background-color: var(--gold); color: var(--green);">ES</a>
+      <a href="#" id="toggle-lang-mobile" class="btn" style="background-color: var(--silver); color: var(--green);">ES</a>
     </li>
   </ul>
 
@@ -65,8 +65,8 @@
             <img src="images/placeholder.jpg" alt="People">
           </div>
           <div class="card-content">
-            <h5 class="lang" data-en="People" data-es="Gente">People</h5>
-            <p class="lang" data-en="Meet our team of talented individuals." data-es="Conoce a nuestro equipo de individuos talentosos.">Conoce a nuestro equipo de individuos talentosos.</p>
+            <h5 class="lang" data-en="People" data-es="Gente">Gente</h5>
+            <p class="lang" data-en="Meet our team of talented individuals." data-es="Conoce a nuestro talentoso equipo.">Conoce a nuestro talentoso equipo.</p>
             <a href="people.html" class="btn btn-dark-green lang" data-en="Learn More" data-es="Saber Más">Saber Más</a>
           </div>
         </div>
@@ -77,7 +77,7 @@
             <img src="images/placeholder.jpg" alt="Projects">
           </div>
           <div class="card-content">
-            <h5 class="lang" data-en="Projects" data-es="Proyectos">Projects</h5>
+            <h5 class="lang" data-en="Projects" data-es="Proyectos">Proyectos</h5>
             <p class="lang" data-en="Discover our innovative projects." data-es="Descubre nuestros proyectos innovadores.">Descubre nuestros proyectos innovadores.</p>
             <a href="projects.html" class="btn btn-dark-green lang" data-en="Learn More" data-es="Saber Más">Saber Más</a>
           </div>
@@ -90,7 +90,7 @@
           </div>
           <div class="card-content">
             <h5 class="lang" data-en="News & Social Media" data-es="Noticias y Redes Sociales">Noticias y Redes Sociales</h5>
-            <p class="lang" data-en="Stay updated with our latest news and social media." data-es="Mantente actualizado con nuestras últimas noticias y redes sociales.">Mantente actualizado con nuestras últimas noticias y redes sociales.</p>
+            <p class="lang" data-en="Stay updated with our latest news and social media." data-es="Mantente al tanto de nuestras últimas actualizaciones.">Mantente al tanto de nuestras últimas actualizaciones.</p>
             <a href="news.html" class="btn btn-dark-green lang" data-en="Learn More" data-es="Saber Más">Saber Más</a>
           </div>
         </div>
@@ -99,7 +99,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="page-footer" style="background-color: #006853; color: var(--light-gray);">
+  <footer class="page-footer" style="background-color: var(--green); color: var(--light-gray);">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -118,28 +118,21 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 m6">
-            © 2024 Centro de Datos + Algoritmos + Sociedad
-          </div>
-          <div class="col s12 m6">
-            <a class="grey-text text-lighten-3" href="https://x.com/DataAlgoSocITAM" target="_blank">
-              <img src="images/twitter_icon.png" alt="Twitter" style="height: 20px; margin-right: 10px;">
-            </a>
-            <a class="grey-text text-lighten-3" href="https://www.facebook.com/dataalgosocitam" target="_blank">
-              <img src="images/facebook_icon.png" alt="Facebook" style="height: 20px; margin-right: 10px;">
-            </a>
-            <a class="grey-text text-lighten-3" href="https://www.instagram.com/dataalgosocitam/" target="_blank">
-              <img src="images/instagram_icon.png" alt="Instagram" style="height: 20px;">
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="footer-icons container center-align">
+      <a class="grey-text text-lighten-3" href="https://x.com/DataAlgoSocITAM" target="_blank">
+        <img src="images/twitter_icon.png" alt="Twitter">
+      </a>
+      <a class="grey-text text-lighten-3" href="https://www.facebook.com/dataalgosocitam" target="_blank">
+        <img src="images/facebook_icon.png" alt="Facebook">
+      </a>
+      <a class="grey-text text-lighten-3" href="https://www.instagram.com/dataalgosocitam/" target="_blank">
+        <img src="images/instagram_icon.png" alt="Instagram">
+      </a>
     </div>
   </footer>
 
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/main.js"></script>
 </body>
