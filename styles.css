@@ -1,0 +1,49 @@
+/* styles.css */
+
+/* Color Variables */
+:root {
+    --dark-green: #004d40;
+    --light-gray: #f5f5f5;
+    --gold: #ffd700;
+    --silver: #c0c0c0;
+  }
+  
+  /* Navbar */
+  .navbar-dark .navbar-nav .nav-link {
+    color: var(--light-gray);
+  }
+  .navbar-dark .navbar-brand {
+    color: var(--gold);
+  }
+  
+  /* Hero Section */
+  .bg-dark-green {
+    background-color: var(--dark-green) !important;
+  }
+  .text-white {
+    color: #fff !important;
+  }
+  
+  /* Cards */
+  .card-title {
+    color: var(--dark-green);
+  }
+  .btn-dark-green {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    color: var(--light-gray);
+  }
+  .btn-dark-green:hover {
+    background-color: var(--light-gray);
+    border-color: var(--gold);
+    color: var(--dark-green);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
