@@ -38,50 +38,70 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const projectContainer = document.getElementById('projectContainer');
 
-  projects.forEach((project, index) => {
-    const projectCard = `
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-image">
-            <img src="${project.img}">
-            <span class="card-title">${project.title}</span>
-          </div>
-          <div class="card-content">
-            <p>${project.description}</p>
-          </div>
-          <div class="card-action">
-            <a href="#projectModal${index}" class="modal-trigger">View Researchers</a>
+  if (projectContainer) {
+    projects.forEach((project, index) => {
+      const projectCard = `
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="${project.img}">
+              <span class="card-title">${project.title}</span>
+            </div>
+            <div class="card-content">
+              <p>${project.description}</p>
+            </div>
+            <div class="card-action">
+              <a href="#projectModal${index}" class="modal-trigger">View Researchers</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="projectModal${index}" class="modal">
-        <div class="modal-content">
-          <h4>${project.title} Researchers</h4>
-          ${project.researchers.map(researcher => `
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="${researcher.img}">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>${researcher.name}</h5>
-                  <p>${researcher.role}</p>
+        <div id="projectModal${index}" class="modal">
+          <div class="modal-content">
+            <h4>${project.title} Researchers</h4>
+            ${project.researchers.map(researcher => `
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="${researcher.img}">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <h5>${researcher.name}</h5>
+                    <p>${researcher.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          `).join('')}
+            `).join('')}
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
         </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-        </div>
-      </div>
-    `;
+      `;
 
-    projectContainer.innerHTML += projectCard;
-  });
+      projectContainer.innerHTML += projectCard;
+    });
 
-  // Initialize Materialize components
-  const elems = document.querySelectorAll('.modal');
-  M.Modal.init(elems);
+    // Initialize Materialize components
+    const elems = document.querySelectorAll('.modal');
+    M.Modal.init(elems);
+  }
+
+  // Language toggle functionality
+  function toggleLanguage() {
+    const currentLang = this.innerText;
+    const newLang = currentLang === 'ES' ? 'EN' : 'ES';
+    this.innerText = newLang;
+
+    const elements = document.querySelectorAll('.lang');
+    elements.forEach(el => {
+      const text = el.dataset[newLang.toLowerCase()];
+      if (text) {
+        el.innerText = text;
+      }
+    });
+  }
+
+  document.getElementById('toggle-lang').addEventListener('click', toggleLanguage);
+  document.getElementById('toggle-lang-mobile').addEventListener('click', toggleLanguage);
 });

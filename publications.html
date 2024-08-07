@@ -1,63 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro de Datos + Algoritmos + Sociedad</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications - Centro de Datos + Algoritmos + Sociedad</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="nav-wrapper dark-green">
+  <nav class="nav-wrapper" style="background-color: #006853;">
     <div class="container">
       <a href="index.html" class="brand-logo">
-        <img src="images/logo.jpg" alt="CDAS Logo" class="logo">
+        <img src="images/itam_logo.png" alt="ITAM Logo">
+        <img src="images/cdas_logo.jpg" alt="CDAS Logo">
+        <span class="center-name">Centro de Datos + Algoritmos + Sociedad</span>
       </a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="blog.html">Blog/Social Media</a></li>
+        <li><a href="index.html" class="lang" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="people.html" class="lang" data-en="People" data-es="Gente">People</a></li>
+        <li><a href="projects.html" class="lang" data-en="Projects" data-es="Proyectos">Projects</a></li>
+        <li><a href="publications.html" class="lang" data-en="Publications" data-es="Publicaciones">Publications</a></li>
+        <li><a href="events.html" class="lang" data-en="Events" data-es="Eventos">Events</a></li>
+        <li><a href="news.html" class="lang" data-en="News & Social Media" data-es="Noticias y Redes Sociales">News & Social Media</a></li>
+        <li>
+          <a href="#" id="toggle-lang" class="btn" style="background-color: var(--gold); color: var(--green);">ES</a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <!-- Mobile Navigation -->
   <ul class="sidenav" id="mobile-nav">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="people.html">People</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="blog.html">Blog/Social Media</a></li>
-  </ul>  
+    <li><a href="index.html" class="lang" data-en="Home" data-es="Inicio">Home</a></li>
+    <li><a href="people.html" class="lang" data-en="People" data-es="Gente">People</a></li>
+    <li><a href="projects.html" class="lang" data-en="Projects" data-es="Proyectos">Projects</a></li>
+    <li><a href="publications.html" class="lang" data-en="Publications" data-es="Publicaciones">Publications</a></li>
+    <li><a href="events.html" class="lang" data-en="Events" data-es="Eventos">Events</a></li>
+    <li><a href="news.html" class="lang" data-en="News & Social Media" data-es="Noticias y Redes Sociales">News & Social Media</a></li>
+    <li>
+      <a href="#" id="toggle-lang-mobile" class="btn" style="background-color: var(--gold); color: var(--green);">ES</a>
+    </li>
+  </ul>
 
   <!-- Publications Section -->
-  <section class="container my-5">
-    <h2 class="text-center">Publications</h2>
-    <div class="row mt-4">
-      <!-- Card for each publication -->
-      <div class="col-md-4">
+  <div class="container">
+    <h2 class="center-align lang" data-en="Publications" data-es="Publicaciones">Publications</h2>
+    <div class="row">
+      <!-- Placeholder for publication cards -->
+      <div class="col s12 m6">
         <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Publication Title</h5>
-            <p class="card-text">Abstract</p>
-            <p class="card-text"><small class="text-muted">Authors</small></p>
-            <a href="publication_link" class="btn btn-dark-green">Read Full Publication</a>
+          <div class="card-content">
+            <span class="card-title">Publication Title 1</span>
+            <p>This is a brief description of Publication 1.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Read More</a>
           </div>
         </div>
       </div>
-      <!-- Repeat above block for more publications -->
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Publication Title 2</span>
+            <p>This is a brief description of Publication 2.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Footer -->
+  <footer class="page-footer" style="background-color: #006853; color: var(--light-gray);">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Centro de Datos + Algoritmos + Sociedad</h5>
+          <p class="grey-text text-lighten-4">
+            ITAM - Instituto Tecnológico Autónomo de México
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://itam.mx" target="_blank">ITAM</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://computacion.itam.mx/es" target="_blank">Ingeniería en Computación</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://cienciadedatos.itam.mx" target="_blank">Licenciatura en Ciencia de Datos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6">
+            © 2024 Centro de Datos + Algoritmos + Sociedad
+          </div>
+          <div class="col s12 m6">
+            <a class="grey-text text-lighten-3" href="https://x.com/DataAlgoSocITAM" target="_blank">
+              <img src="images/twitter_icon.png" alt="Twitter" style="height: 20px; margin-right: 10px;">
+            </a>
+            <a class="grey-text text-lighten-3" href="https://www.facebook.com/dataalgosocitam" target="_blank">
+              <img src="images/facebook_icon.png" alt="Facebook" style="height: 20px; margin-right: 10px;">
+            </a>
+            <a class="grey-text text-lighten-3" href="https://www.instagram.com/dataalgosocitam/" target="_blank">
+              <img src="images/instagram_icon.png" alt="Instagram" style="height: 20px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
