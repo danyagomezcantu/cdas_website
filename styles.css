@@ -1,49 +1,99 @@
-/* styles.css */
+/* Custom styles for CDAS website */
+
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 /* Color Variables */
 :root {
-    --dark-green: #004d40;
-    --light-gray: #f5f5f5;
-    --gold: #ffd700;
-    --silver: #c0c0c0;
+  --green: #006853;
+  --light-gray: #f5f5f5;
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+}
+
+/* Set default font */
+body {
+  font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Navbar */
+.nav-wrapper {
+  background-color: var(--green) !important;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.center-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--gold) !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* Adjust as needed */
+}
+
+.sidenav a {
+  color: var(--gold) !important;
+}
+
+.sidenav {
+  background-color: var(--green);
+}
+
+/* Card Styles */
+.card-title {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card .card-image img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Footer styles */
+.page-footer {
+  padding-top: 20px;
+}
+
+.page-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-footer .row {
+  margin-bottom: 0;
+}
+
+.page-footer h5 {
+  margin-top: 0;
+}
+
+.footer-copyright {
+  background-color: #004d40;
+  padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  
-  /* Navbar */
-  .navbar-dark .navbar-nav .nav-link {
-    color: var(--light-gray);
+  .center-name {
+    display: none;
   }
-  .navbar-dark .navbar-brand {
-    color: var(--gold);
-  }
-  
-  /* Hero Section */
-  .bg-dark-green {
-    background-color: var(--dark-green) !important;
-  }
-  .text-white {
-    color: #fff !important;
-  }
-  
-  /* Cards */
-  .card-title {
-    color: var(--dark-green);
-  }
-  .btn-dark-green {
-    background-color: var(--dark-green);
-    border-color: var(--dark-green);
-    color: var(--light-gray);
-  }
-  .btn-dark-green:hover {
-    background-color: var(--light-gray);
-    border-color: var(--gold);
-    color: var(--dark-green);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-  
+}
