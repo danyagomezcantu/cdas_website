@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   const projectContainer = document.getElementById('projectContainer');
+  const peopleContainer = document.getElementById('peopleContainer');
+  const publicationsContainer = document.getElementById('publicationsContainer');
+  const eventsContainer = document.getElementById('eventsContainer');
 
   if (projectContainer) {
     projects.forEach((project, index) => {
@@ -85,6 +88,106 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Materialize components
     const elems = document.querySelectorAll('.modal');
     M.Modal.init(elems);
+
+    const sidenav = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenav);
+  }
+
+  if (peopleContainer) {
+    const people = [
+      {
+        name: "Student Name 1",
+        role: "Role / Brief Bio 1",
+        img: "images/placeholder.jpg"
+      },
+      {
+        name: "Student Name 2",
+        role: "Role / Brief Bio 2",
+        img: "images/placeholder.jpg"
+      }
+    ];
+
+    people.forEach(person => {
+      const personCard = `
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="${person.img}">
+            </div>
+            <div class="card-content">
+              <h5>${person.name}</h5>
+              <p>${person.role}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      peopleContainer.innerHTML += personCard;
+    });
+  }
+
+  if (publicationsContainer) {
+    const publications = [
+      {
+        title: "Publication Title 1",
+        description: "Brief description of Publication 1.",
+        link: "#"
+      },
+      {
+        title: "Publication Title 2",
+        description: "Brief description of Publication 2.",
+        link: "#"
+      }
+    ];
+
+    publications.forEach(publication => {
+      const publicationCard = `
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <h5>${publication.title}</h5>
+              <p>${publication.description}</p>
+            </div>
+            <div class="card-action">
+              <a href="${publication.link}" target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      publicationsContainer.innerHTML += publicationCard;
+    });
+  }
+
+  if (eventsContainer) {
+    const events = [
+      {
+        title: "Event Title 1",
+        description: "Brief description of Event 1.",
+        date: "Date 1"
+      },
+      {
+        title: "Event Title 2",
+        description: "Brief description of Event 2.",
+        date: "Date 2"
+      }
+    ];
+
+    events.forEach(event => {
+      const eventCard = `
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <h5>${event.title}</h5>
+              <p>${event.description}</p>
+              <p>${event.date}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      eventsContainer.innerHTML += eventCard;
+    });
   }
 
   // Language toggle functionality

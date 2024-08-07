@@ -1,19 +1,25 @@
 /* Custom styles for CDAS website */
 
-/* Import Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Import Poppins and Raleway fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
 /* Color Variables */
 :root {
-  --green: #006853;
+  --green: #006753;
+  --light-green: #00956e;
+  --dark-green: #005745;
   --light-gray: #f5f5f5;
-  --gold: #ffd700;
+  --white: #ffffff;
   --silver: #c0c0c0;
 }
 
-/* Set default font */
+/* Set default fonts */
 body {
-  font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .center-name, .card-title {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Navbar */
@@ -32,17 +38,17 @@ body {
 }
 
 .center-name {
-  font-size: 1rem;
+  font-size: calc(1rem + 1vw);
   font-weight: bold;
-  color: var(--gold) !important;
+  color: var(--white) !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px; /* Adjust as needed */
+  max-width: calc(100% - 200px); /* Adjust based on available space */
 }
 
 .sidenav a {
-  color: var(--gold) !important;
+  color: var(--white) !important;
 }
 
 .sidenav {
@@ -50,18 +56,46 @@ body {
 }
 
 /* Card Styles */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
 .card-title {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 5px;
-  color: white;
+  color: var(--white);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card .card-image img {
   max-height: 200px;
   object-fit: cover;
+}
+
+.card-content, .card-action {
+  padding: 15px;
+}
+
+.card-action a {
+  color: var(--green);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-action a:hover {
+  background-color: var(--light-green);
+  border-radius: 5px;
+  color: var(--white);
+  padding: 5px;
 }
 
 /* Footer styles */
@@ -82,9 +116,9 @@ body {
   margin-top: 0;
 }
 
-.footer-copyright {
-  background-color: #004d40;
-  padding: 10px 0;
+.footer-icons img {
+  height: 20px;
+  margin-right: 10px;
 }
 
 /* Responsive Design */
@@ -94,6 +128,6 @@ body {
     padding-right: 1rem;
   }
   .center-name {
-    display: none;
+    font-size: 1rem;
   }
 }
