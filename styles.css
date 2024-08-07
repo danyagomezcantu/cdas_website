@@ -1,4 +1,4 @@
-/* styles.css */
+/* Custom styles for CDAS website */
 
 /* Color Variables */
 :root {
@@ -9,34 +9,36 @@
   }
   
   /* Navbar */
-  .navbar-dark .navbar-nav .nav-link {
-    color: var(--light-gray);
-  }
-  .navbar-dark .navbar-brand {
-    color: var(--gold);
-  }
-  
-  /* Hero Section */
-  .bg-dark-green {
+  .nav-wrapper {
     background-color: var(--dark-green) !important;
   }
-  .text-white {
-    color: #fff !important;
+  
+  .brand-logo {
+    display: flex;
+    align-items: center;
   }
   
-  /* Cards */
-  .card-title {
-    color: var(--dark-green);
+  .brand-logo img {
+    height: 40px;
+    margin-right: 10px;
   }
-  .btn-dark-green {
+  
+  .brand-logo, .sidenav a {
+    color: var(--gold) !important;
+  }
+  
+  .sidenav {
     background-color: var(--dark-green);
-    border-color: var(--dark-green);
-    color: var(--light-gray);
   }
-  .btn-dark-green:hover {
-    background-color: var(--light-gray);
-    border-color: var(--gold);
-    color: var(--dark-green);
+  
+  .card-title {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+  }
+  
+  /* Modal */
+  .modal {
+    max-width: 75%;
   }
   
   /* Responsive Design */
